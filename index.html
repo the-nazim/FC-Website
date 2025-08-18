@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-group">
+                <a href="#">
+                    <img src="https://placehold.co/200x70/eeeeee/1a4b84?text=LOGO" alt="Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">Menu 1</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">
+                                <h3>Sub Item</h3>
+                                <p>Description</p>
+                                <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </li>                    
+                    <li class="dropdown">
+                        <a href="#">Menu 2</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">
+                                <h3>Sub Item</h3>
+                                <p>Description</p>
+                                <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Our Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="cta-button">Call Now</a>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <!-- The "poster" attribute shows an image while the video loads or if it fails -->
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://placehold.co/1920x1080/0f172a/ffffff?text=Hero+Video">
+            <source src="path/to/your/video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Heading</h1>
+            <p>Subheading</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Button 1</a>
+                <a href="#" class="btn-secondary">Button 2</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="notification-bar" id="notificationBar">
+        <div class="notification-container">
+            <div class="notification-carousel" id="notificationCarousel">
+                <div class="notification-slide active">
+                    <div class="notification-content">
+                        <i class="fas fa-info-circle notification-icon"></i>
+                        <span class="notification-text">Notification text</span>
+                        <a href="#" class="notification-btn">Action</a>
+                    </div>
+                </div>
+            </div>
+            <button class="notification-nav prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="notification-nav next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <section class="autonav-section fade-in" id="autonav-section">
+        <div class="autonav-container">
+            <div class="autonav-title">
+                <h2>Section Title</h2>
+            </div>
+            <div class="autonav-content">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Card Title</h3>
+                        <p>Description</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Footer Section</h3>
+                <p>Content</p>
+                <a href="#">Link</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Company</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Dropdown functionality
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function(e) {
+                this.classList.toggle('open');
+                e.stopPropagation();
+            });
+        });
+
+        // Notification carousel
+        const carousel = document.getElementById('notificationCarousel');
+        const slides = carousel.querySelectorAll('.notification-slide');
+        let currentSlide = 0;
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        // Fade-in effect on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        faders.forEach(fader => observer.observe(fader));
+    </script>
+</body>
+</html>
