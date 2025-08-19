@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Future Colours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Header content will be loaded here by script.js -->
+    </header>
+
+    <section class="hero hero-inner">
+        <div class="hero-slide" style="background-image: url('https://placehold.co/1920x1080/0f172a/ffffff?text=Contact+Us');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>We're here to help. Contact us for inquiries, quotes, or to discuss your next project.</p>
+        </div>
+    </section>
+
+    <main class="contact-page-content section">
+        <!-- Top Section: Map and Details -->
+        <div class="contact-grid-layout">
+            <div class="map-wrapper slide-in-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178653926924!2d55.27208781500959!3d25.19719788389618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ce43a2!2sBurj%20Khalifa!5e0!3m2!1sen!2sae!4v1672522556911!5m2!1sen!2sae" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office Location Map"></iframe>
+            </div>
+            <div class="contact-details slide-in-right">
+                <h2>Contact Information</h2>
+                <p>Feel free to reach out to us through any of the following methods. We look forward to hearing from you!</p>
+                <ul class="contact-info-list">
+                    <li><i class="fas fa-map-marker-alt"></i><div><strong>Address:</strong><span>123 Industrial Area, City, UAE</span></div></li>
+                    <li><i class="fas fa-envelope"></i><div><strong>Email:</strong><a href="mailto:info@futurecolours.com">info@futurecolours.com</a></div></li>
+                    <li><i class="fas fa-phone"></i><div><strong>Phone:</strong><a href="tel:+971000000000">+971 00 000 0000</a></div></li>
+                    <li><i class="fas fa-clock"></i><div><strong>Working Hours:</strong><span>Mon - Sat: 9:00 AM - 6:00 PM</span></div></li>
+                </ul>
+                <div class="contact-socials">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Contact Form -->
+        <div class="form-section-container fade-in">
+            <div class="contact-form-wrapper">
+                <div id="form-message-container"></div>
+                <h2 id="form-title" style="margin-bottom: 2rem;">Send Us a Message</h2>
+                <form id="contact-form" action="send_email.php" method="POST">
+                    <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number</label><input type="tel" id="mobile" name="mobile" required>
+                        </div>
+                        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" required></div>
+                    </div>
+                    <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" required></div>
+                    <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
+                    <button type="submit" id="submit-button" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content will be loaded here by script.js -->
+    </footer>
+    
+    <script src="script.js" defer></script>
+    <script>
+        // This script handles the form submission UX
+        const contactForm = document.getElementById('contact-form');
+        const submitButton = document.getElementById('submit-button');
+
+        if (contactForm && submitButton) {
+            contactForm.addEventListener('submit', () => {
+                submitButton.disabled = true;
+                // The .loading class is already in your style.css
+                submitButton.innerHTML = '<span class="loading"></span> Sending...';
+            });
+        }
+
+        // Reset form state if the user navigates back to the page
+        window.addEventListener('pageshow', function(event) {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
+            }
+        });
+
+        // This script checks the URL for a status and displays a message.
+        document.addEventListener('DOMContentLoaded', () => {
+            const messageContainer = document.getElementById('form-message-container');
+            const formTitle = document.getElementById('form-title');
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+
+            if (status === 'success') {
+                messageContainer.innerHTML = '<p class="form-success">Thank you! Your message has been sent successfully.</p>';
+                // Optionally hide the title or form if you want
+                if(formTitle) formTitle.style.display = 'none'; // Hide the "Send Us a Message" title
+                if(contactForm) contactForm.style.display = 'none'; // Hide the form itself
+            } else if (status === 'error') {
+                messageContainer.innerHTML = '<p class="form-error">Oops! Something went wrong. Please check your server configuration or try again.</p>';
+            }
+
+            // Clean the URL so the message doesn't reappear on refresh
+            if (status && window.history.replaceState) {
+                const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
+            }
+        });
+    </script>
+</body>
+</html>
