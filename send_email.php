@@ -3,7 +3,7 @@
 // --- CONFIGURATION ---
 // It's a good practice to keep configuration variables at the top.
 $recipient_email = "nazim.dev06@gmail.com"; // <-- The email address that receives the form submissions.
-$email_subject_prefix = "New Contact Form Submission";
+$email_subject_prefix = "New Message via website";
 // --- END CONFIGURATION ---
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Construct the email content
     $email_subject = $email_subject_prefix . ": " . $subject;
-    $email_body = "You have received a new message from your website contact form.\n\n";
+    $email_body = "You have received a new message from via website.\n\n";
     $email_body .= "Name: $name\n";
     $email_body .= "Email: $visitor_email\n";
     $email_body .= "Mobile: $mobile\n\n";
