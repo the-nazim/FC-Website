@@ -234,3 +234,27 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(initializePage)
         .catch(error => console.error("Error initializing page components:", error));
 });
+
+// Add this to your existing script.js or in a script tag
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.main-hero-slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+            slide.style.display = 'none';
+        });
+        slides[index].classList.add('active');
+        slides[index].style.display = 'block';
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Initialize slideshow
+    showSlide(0);
+    setInterval(nextSlide, 5000);
+});

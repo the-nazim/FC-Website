@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Future Colors</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -13,62 +13,45 @@
         <!-- Header content will be loaded here by script.js -->
     </header>
 
-    <section class="hero">
-        <div class="hero-slideshow">
-            <div class="hero-slide" style="background-image: url('https://placehold.co/1920x1080/0f172a/ffffff?text=Slide+1');"></div>
-            <div class="hero-slide" style="background-image: url('https://placehold.co/1920x1080/1e3a8a/ffffff?text=Slide+2');"></div>
-            <div class="hero-slide" style="background-image: url('https://placehold.co/1920x1080/3730a3/ffffff?text=Slide+3');"></div>
+    <section class="main-hero">
+        <div class="main-hero-slideshow">
+            <div class="main-hero-slide" style="background-image: url('res/general-images/home-page/pexels-mikhail-nilov-7821344.jpg');"></div>
+            <div class="main-hero-slide" style="background-image: url('res/general-images/home-page/pexels-sliceisop-2460434.jpg');"></div>
+            <div class="main-hero-slide" style="background-image: url('res/general-images/home-page/pexels-mikhail-nilov-7821344.jpg');"></div>
         </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="main-hero-overlay"></div>
+        <div class="main-hero-content">
             <h1>Future Colours</h1>
             <p>Your Trusted Signage & Branding Partner in UAE</p>
-            <!-- <div class="hero-buttons">
-                <a href="#" class="btn-primary">Button 1</a>
-                <a href="#" class="btn-secondary">Button 2</a>
-            </div> -->
         </div>
     </section>
-
-    <!-- <div class="notification-bar" id="notificationBar">
-        <div class="notification-container">
-            <div class="notification-carousel" id="notificationCarousel">
-                <div class="notification-slide active">
-                    <div class="notification-content">
-                        <i class="fas fa-info-circle notification-icon"></i>
-                        <span class="notification-text">Notification text</span>
-                        <a href="#" class="notification-btn">Action</a>
-                    </div>
-                </div>
-            </div>
-            <button class="notification-nav prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-            <button class="notification-nav next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-    </div> -->
 
     <section class="about-section section">
         <div class="about-container">
             <div class="about-image-grid slide-in-left">
-                <img src="https://placehold.co/600x400/1f2937/ffffff?text=Team+Photo" alt="Team working together" class="grid-img-1">
-                <img src="https://placehold.co/400x600/374151/ffffff?text=Office" alt="Modern office space" class="grid-img-2">
-                <img src="https://placehold.co/400x400/4b5563/ffffff?text=Project" alt="A successful project" class="grid-img-3">
+                <?php
+                $about_images = glob('res/general-images/about-page/*.{jpg,jpeg,png}', GLOB_BRACE);
+                foreach(array_slice($about_images, 0, 9) as $index => $image) {
+                    echo '<img src="' . $image . '" alt="About Future Colours" class="grid-img-' . ($index + 1) . '">';
+                }
+                ?>
             </div>
             <div class="about-text slide-in-right">
                 <h2>Who We Are</h2>
                 <p>
-                    A compelling paragraph about the company's origin, mission, and the core values that drive the team. This is where you build a connection with your audience.
+                    With years of experience in the UAE's signage industry, Future Colours has established itself as a leading provider of high-quality signage and branding solutions.
                 </p>
                 <p>
-                    Another paragraph can elaborate on the team's expertise, the unique approach to solving problems, or the vision for the future. Keep it engaging and authentic.
+                    We combine creative design, premium materials, and expert craftsmanship to deliver signage solutions that help businesses make a lasting impression.
                 </p>
-                <a href="#" class="cta-button">Meet The Team</a>
+                <a href="about-us.html" class="cta-button">Learn More</a>
             </div>
         </div>
     </section>
 
     <section class="services-section section fade-in">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title" style="color: white;">Our Services</h2>
             <p class="section-subtitle">We provide a wide range of high-quality signage and branding solutions to elevate your business presence.</p>
             <div class="services-grid">
                 <div class="service-card">
@@ -77,9 +60,9 @@
                     <p>Eye-catching and durable 3D signs that make your brand stand out from the competition.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-car"></i></div>
-                    <h3>Vehicle Graphics</h3>
-                    <p>Turn your company vehicles into mobile billboards with our custom, high-impact vehicle wraps.</p>
+                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Printing Solutions</h3>
+                    <p>Bring your ideas to life with advanced printers delivering vibrant, durable, and high-impact signage.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-store"></i></div>
@@ -98,7 +81,7 @@
     <section class="offer-section section">
         <div class="offer-container">
             <div class="offer-text slide-in-left">
-                <h2 class="section-title-left">What We Offer</h2>
+                <h2 class="section-title-left" style="color: white;">What We Offer</h2>
                 <p>Beyond products, we offer a partnership dedicated to quality, reliability, and your success.</p>
                 <ul class="offer-list">
                     <li><i class="fas fa-check-circle"></i> <span><strong>High-Quality Materials:</strong> We use only premium, durable materials for long-lasting results.</span></li>
@@ -108,14 +91,14 @@
                 </ul>
             </div>
             <div class="offer-image slide-in-right">
-                <img src="https://placehold.co/600x450/1f2937/ffffff?text=Our+Workshop" alt="Our workshop showing precision work">
+                <img src="res/general-images/workshop/Google_AI_Studio_2025-08-28T07_51_13.044Z.png" alt="Our workshop showing precision work">
             </div>
         </div>
     </section>
 
     <section class="testimonials-section section fade-in">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
+            <h2 class="section-title" style="color: white;">What Our Clients Say</h2>
             <div class="testimonial-slider-container">
                 <div class="testimonials-grid">
                     <div class="testimonial-card">

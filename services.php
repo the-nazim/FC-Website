@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - FC Signs</title>
-    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="style.css">     <!-- Load style.css first -->
+    <link rel="stylesheet" href="services.css">  <!-- Then load services.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- <header>
-
-    </header> -->
+    <header>
+        <?php include 'header.html'; ?>
+    </header>
 
     <div class="services-container">
-        <h1 class="main-title animate-fade-in">Our Services</h1>
+        <h1 class="section-title animate-fade-in">Our Services</h1>
         <?php
         // Define service categories and their folders
         $services = [
@@ -79,9 +81,9 @@
                             </div>
                         </div>
                         <div class="service-content">
-                            <h2><?php echo $service['title']; ?></h2>
-                            <p><?php echo $service['description']; ?></p>
-                            <a href="#" class="learn-more">Learn More →</a>
+                            <h2 class="section-title-left"><?php echo $service['title']; ?></h2>
+                            <p class="section-subtitle"><?php echo $service['description']; ?></p>
+                            <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </section>
@@ -90,9 +92,10 @@
         }
         ?>
     </div>
-<!-- 
+
     <footer>
-    </footer> -->
+        <?php include 'footer.html'; ?>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -141,6 +144,12 @@
 
                 setInterval(moveSlides, 3000);
             });
+        });
+
+        // Add mobile menu functionality
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
 </body>
