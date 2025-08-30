@@ -65,23 +65,30 @@ $images = glob($server_image_folder . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
         <!-- Header content will be loaded here by script.js -->
     </header>
 
-    <!-- <section class="hero hero-inner">
-        <div class="hero-slide" style="background-image: url('https://placehold.co/1920x1080/3730a3/ffffff?text=Our+Works');"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Our Works</h1>
-            <p>A showcase of our commitment to quality and creativity.</p>
-        </div>
-    </section> -->
 
     <section class="page-header">
+        <div class="page-header-container">
+            <div class="page-header-content-left">
+                <h1>Our Works</h1>
+                <p>A showcase of our commitment to quality and creativity.</p>
+            </div>
+            <div class="page-header-image-right">
+                <img src="res/general-images/about-page/team-image.png" alt="About Future Colours">
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="page-header">
         <div class="page-header-container">
             <div class="page-header-content">
                 <h1>Our Works</h1>
                 <p>A showcase of our commitment to quality and creativity.</p>
             </div>
+            <div class="page-header-image">
+                <img src="https://placehold.co/1920x1080/3730a3/ffffff?text=Our+Works" alt="Our Works">
+            </div>
         </div>
-    </section>
+    </section> -->
 
     <main class="gallery-page-content section">
         <div class="container">
