@@ -56,23 +56,23 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-sign-hanging"></i></div>
-                    <h3>3D Signage</h3>
+                    <h3>3D Indoor and Outdoor Signs</h3>
                     <p>Eye-catching and durable 3D signs that make your brand stand out from the competition.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Printing Solutions</h3>
+                    <h3>Complete Printing Solutions</h3>
                     <p>Bring your ideas to life with advanced printers delivering vibrant, durable, and high-impact signage.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-store"></i></div>
-                    <h3>Retail & Shop Fronts</h3>
-                    <p>Complete solutions for storefronts, including window graphics, fascias, and internal branding.</p>
+                    <div class="service-icon"><i class="fas fa-gift"></i></div>
+                    <h3>Personalised Gift Items</h3>
+                    <p>Customised gifts and promotional items to enhance your brand visibility and customer engagement.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-compass-drafting"></i></div>
-                    <h3>Custom Fabrication</h3>
-                    <p>Bespoke fabrication services for unique projects that require a creative and technical touch.</p>
+                    <h3>Acrylic Fabrication</h3>
+                    <p>Custom acrylic solutions crafted with precision perfect for signage, displays, and creative projects.</p>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Future Colours</title>
+    <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -14,11 +14,14 @@
     </header>
 
     <section class="hero hero-inner">
-        <div class="hero-slide" style="background-image: url('https://placehold.co/1920x1080/0f172a/ffffff?text=Contact+Us');"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Get In Touch</h1>
-            <p>We're here to help. Contact us for inquiries, quotes, or to discuss your next project.</p>
+        <div class="hero-container">
+            <div class="hero-content-left">
+                <h1>Get In Touch</h1>
+                <p>Contact us for inquiries, quotes, or to discuss your next project.</p>
+            </div>
+            <div class="hero-image-right">
+                <img src="res/contact-page/Contact-image.png" alt="About Future Colours">
+            </div>
         </div>
     </section>
 
@@ -26,22 +29,22 @@
         <!-- Top Section: Map and Details -->
         <div class="contact-grid-layout">
             <div class="map-wrapper slide-in-left">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178653926924!2d55.27208781500959!3d25.19719788389618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ce43a2!2sBurj%20Khalifa!5e0!3m2!1sen!2sae!4v1672522556911!5m2!1sen!2sae" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office Location Map"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3635.336340001316!2d54.4750778!3d24.3347739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e416c7ded8e01%3A0x23f45e5e5cde0639!2sFuture%20Colours%20Advetisement%20LLC!5e0!3m2!1sen!2sin!4v1756738806730!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office Location Map"></iframe>
             </div>
             <div class="contact-details slide-in-right">
-                <h2>Contact Information</h2>
+                <h2 style="color: white;">Contact Information</h2>
                 <p>Feel free to reach out to us through any of the following methods. We look forward to hearing from you!</p>
                 <ul class="contact-info-list">
-                    <li><i class="fas fa-map-marker-alt"></i><div><strong>Address:</strong><span>123 Industrial Area, City, UAE</span></div></li>
-                    <li><i class="fas fa-envelope"></i><div><strong>Email:</strong><a href="mailto:info@futurecolours.com">info@futurecolours.com</a></div></li>
-                    <li><i class="fas fa-phone"></i><div><strong>Phone:</strong><a href="tel:+971000000000">+971 00 000 0000</a></div></li>
-                    <li><i class="fas fa-clock"></i><div><strong>Working Hours:</strong><span>Mon - Sat: 9:00 AM - 6:00 PM</span></div></li>
+                    <li><i class="fas fa-map-marker-alt"></i><div><strong>Address:</strong><span style="display: block; max-width: 450px; white-space: normal; line-height: 1.5; font-size: 1.1rem">Abu Dhabi Industrial City - ICAD I - Abu Dhabi Near AL HOTY STANGER LABORATORIES Warehouse Number 11 </span></div></li>
+                    <li><i class="fas fa-envelope"></i><div><strong>Email:</strong><a href="mailto: info@futurecoloursadv.com "> info@futurecoloursadv.com </a></div></li>
+                    <li><i class="fas fa-phone" style="display: block; margin-top: 4px;"></i><div><strong>Phone:</strong><a href="tel:+971521718747">+971 521718747</a><a href="tel:+971585738040">+971 585738040</a></div></li>
+                    <li><i class="fas fa-clock"></i><div><strong>Working Hours:</strong><span>Mon - Sat: 9:00 AM - 7:00 PM</span></div></li>
                 </ul>
                 <div class="contact-socials">
-                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/1BH9Dvwd3m/?mibextid=wwXIfr" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/future_colours_advertisement_?igsh=dGM2dHpyMHVyeHdm" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/future-colours-advertisement-llc/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
                 </div>
             </div>
         </div>
@@ -50,7 +53,7 @@
         <div class="form-section-container fade-in">
             <div class="contact-form-wrapper">
                 <div id="form-message-container"></div>
-                <h2 id="form-title" style="margin-bottom: 2rem;">Send Us a Message</h2>
+                <h2 id="form-title" style="margin-bottom: 2rem; color: white;">Send Us a Message</h2>
                 <form id="contact-form" action="send_email.php" method="POST">
                     <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
                     <div class="form-row">

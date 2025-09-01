@@ -341,9 +341,14 @@ nav {
 .hero-content-left p {
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: var(--dark-gray);  /* Changed to dark gray for better readability */
-  max-width: 400px;
+  /* max-width: 400px; */
   line-height: 1.6;
 }
+
+/* .hero-content {
+  color: var(--black);
+  
+} */
 
 .hero-image-right {
   display: flex;
@@ -1515,7 +1520,7 @@ footer {
 
 /* Contact Us Page */
 .contact-page-content {
-  background-color: var(--dark-navy);
+  background-color: #fdfdfd;
 }
 
 .contact-grid-layout {
@@ -1689,8 +1694,9 @@ footer {
   resize: vertical;
 }
 .footer-about .footer-logo-img {
-  height: 4rem; /* Reduced from 8rem. You can adjust this value. */
+  height: 8.5rem; /* Reduced from 8rem. You can adjust this value. */
   width: auto;
+  margin-top: 3rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1703,7 +1709,7 @@ footer {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .contact-list li:last-child {
@@ -3040,7 +3046,13 @@ html {
 
 /* Page Header Styles */
 .page-header {
-  min-height: 30vh;       /* Adjust section height */
+  /* min-height: 50vh;       Adjust section height
+  padding: 60px 0;        Balanced padding
+  background: rgb(187, 187, 187);
+  margin-top: 50px;
+  display: flex;
+  align-items: center; */
+  min-height: 50vh;       /* Adjust section height */
   padding: 60px 0;        /* Balanced padding */
   background: rgb(187, 187, 187);
   margin-top: 50px;
@@ -3060,11 +3072,12 @@ html {
 
 .page-header-content-left {
   text-align: left;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 .page-header-content-left h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  /* font-size: clamp(2rem, 4vw, 3rem); */
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: normal;
   color: var(--black);
   margin-bottom: 1rem;
@@ -3074,7 +3087,7 @@ html {
 .page-header-content-left p {
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--dark-gray);
-  max-width: 600px;
+  /* max-width: none; */
   line-height: 1.6;
 }
 

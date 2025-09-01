@@ -14,7 +14,7 @@
     </header>
 
     <div class="services-container">
-        <h1 class="section-title animate-fade-in">Our Services</h1>
+        <h1 class="section-title animate-fade-in" style="color: #222831;">Our Services</h1>
         <?php
         // Define service categories and their folders
         $services = [
@@ -83,7 +83,7 @@
                         <div class="service-content">
                             <h2 class="section-title-left"><?php echo $service['title']; ?></h2>
                             <p class="section-subtitle"><?php echo $service['description']; ?></p>
-                            <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="contact-us.html" class="learn-more" style="color: #555D66;">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </section>
