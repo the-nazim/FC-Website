@@ -258,3 +258,18 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlide(0);
     setInterval(nextSlide, 5000);
 });
+
+  const header = document.querySelector("header");
+
+  if (window.location.pathname.endsWith("index.php") || window.location.pathname === "/") {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > window.innerHeight * 0.8) {
+        header.classList.remove("hidden");
+      } else {
+        header.classList.add("hidden");
+      }
+    });
+
+    // Hide header initially
+    header.classList.add("hidden");
+  }

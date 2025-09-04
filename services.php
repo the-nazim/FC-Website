@@ -20,31 +20,31 @@
         $services = [
             'signage-solutions' => [
                 'title' => 'Signage Solutions',
-                'description' => 'Professional signage solutions for your business needs.'
+                'description' => 'At Future Colours, your trusted signage and branding partner in the UAE, we believe every brand deserves to stand out. With a passion for creativity and precision, we deliver end-to-end solutions from innovative design to flawless installation using high-quality materials that ensure lasting impact. Whether it’s guiding, informing, or showcasing your identity, our signage and branding services are crafted to make your message clear, professional, and unforgettable.'
             ],
             'acrylic-products' => [
                 'title' => 'Acrylic Products',
-                'description' => 'High-quality acrylic products and displays.'
+                'description' => 'At Future Colours, we specialize in premium acrylic works designed to elevate your spaces with style and functionality. From custom displays and partitions to branding elements, our solutions are tailored to meet the unique demands of exhibitions, retail environments, offices, and events. Combining skilled craftsmanship, high-quality materials, and meticulous attention to detail, we create durable and visually striking acrylic products delivered on time and within budget.'
             ],
             'wall-graphics' => [
                 'title' => 'Wall Graphics',
-                'description' => 'Creative wall graphics and decorative solutions.'
+                'description' => 'At Future Colours, we offer creative wall graphics and decorative solutions that transform your spaces. Our team works closely with you to design and install stunning wall graphics that reflect your brand identity and enhance the overall aesthetic of your environment.'
             ],
             'printing-solutions' => [
                 'title' => 'Printing Solutions',
-                'description' => 'Professional printing services for all your requirements.'
+                'description' => 'At Future Colours, our advanced digital printing technology allows us to deliver exceptional print and graphic solutions that combine quality, efficiency, and creativity. With the capability to print directly on substrates as well as roll-to-roll, we provide versatile and cost-effective options tailored to your needs. Whether you supply print-ready artwork or require fresh, custom designs, our team ensures every project is produced with precision, vibrancy, and impact.'
             ],
             'promotional-display' => [
                 'title' => 'Promotional Display',
-                'description' => 'Eye-catching promotional displays and materials.'
+                'description' => 'At Future Colours, we design and manufacture high-quality product display stands that seamlessly blend creativity with functionality. From initial concept to final production, our team collaborates closely with clients to craft customized solutions that enhance product visibility while reflecting brand identity. By leveraging diverse materials and advanced production techniques, we deliver stands that are visually striking, durable, and practical—perfect for retail spaces, exhibitions, and promotional environments.'
             ],
             'hoarding-banner' => [
                 'title' => 'Hoarding & Banner',
-                'description' => 'Large format hoarding and banner solutions.'
+                'description' => 'At Future Colours, we provide large format hoarding and banner solutions that effectively promote your brand and message. Our team works with you to create eye-catching designs that are printed on high-quality materials, ensuring durability and impact in any setting.'
             ],
             'additional-services' => [
                 'title' => 'Additional Services',
-                'description' => 'Complementary services to meet all your signage needs.'
+                'description' => 'At Future Colours, we go beyond creating signage by offering a full range of support services that add value and convenience. From maintenance to keep your brand vibrant, to efficient logistics for timely delivery, we handle every detail with care. We also produce high-quality name badges, provide secure storage and warehousing, and refurbish existing signage for a fresh new look. With a focus on quality and reliability, Future Colours is your trusted partner for complete signage and branding support.'
             ]
         ];
 

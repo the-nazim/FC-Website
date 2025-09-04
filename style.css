@@ -69,6 +69,13 @@ header {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Hidden state (slides up + fades out) */
+header.hidden {
+  top: -100px;
+  opacity: 0;
+  pointer-events: none; /* avoids accidental clicks */
+}
+
 nav {
   width: 100%;
   padding-left: 16px;
@@ -207,7 +214,7 @@ nav {
 }
 
 /* Main Hero Section Styles */
-.main-hero {
+/* .main-hero {
     height: 90vh;
     display: flex;
     align-items: center;
@@ -215,6 +222,13 @@ nav {
     position: relative;
     background: #fff4ce;
     overflow: hidden;
+} */
+
+.main-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen height */
+  overflow: hidden;
 }
 
 .main-hero-slideshow {
@@ -261,19 +275,42 @@ nav {
 }
 
 .main-hero-content h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    color: var(--black);
-    margin-bottom: 1.5rem;
-    font-weight: normal;
-    line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* bold for strong impact */
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.main-hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: contain; /* behaves like background-size: cover */
+}
+
+.blue-text {
+  color: #011e3f; /* blue */
+}
+
+.yellow-text {
+  color: #947109; /* yellow */
 }
 
 .main-hero-content p {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    color: var(--dark-gray);
-    line-height: 1.6;
-    margin: 0 auto;
-    max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; /* light for tagline */
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--dark-gray);
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 /* Responsive adjustments */

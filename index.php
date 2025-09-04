@@ -6,25 +6,46 @@
     <title>Future Colors</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <!-- Header content will be loaded here by script.js -->
     </header>
-
+<!-- 
     <section class="main-hero">
-        <div class="main-hero-slideshow">
+       <div class="main-hero-slideshow">
             <div class="main-hero-slide" style="background-image: url('res/general-images/home-page/pexels-mikhail-nilov-7821344.jpg');"></div>
             <div class="main-hero-slide" style="background-image: url('res/general-images/home-page/pexels-sliceisop-2460434.jpg');"></div>
-            <div class="main-hero-slide" style="background-image: url('res/general-images/home-page/pexels-mikhail-nilov-7821344.jpg');"></div>
+            <div class="main-hero-slide" style="background-image: url('res/general-images/home-page/pexels-introspectivedsgn-12973597.jpg');"></div>
+            <div class="main-hero-slide" style="background-image: url('res/general-images/home-page/pexels-introspectivedsgn-18462196.jpg');"></div>
+
+        </div> 
+        <div class="main-hero-slideshow">
+            <video autoplay muted loop playsinline class="main-hero-video">
+                <source src="res\Logo  Reveal.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
         </div>
         <div class="main-hero-overlay"></div>
         <div class="main-hero-content">
-            <h1>Future Colours</h1>
+                <h1>
+                    <span class="blue-text">Future</span> 
+                    <span class="yellow-text">Colours</span>
+                </h1>
             <p>Your Trusted Signage & Branding Partner in UAE</p>
         </div>
+    </section> -->
+
+    <section class="main-hero">
+        <video autoplay muted loop playsinline class="main-hero-video">
+            <source src="res\Logo  Reveal.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </section>
+
 
     <section class="about-section section">
         <div class="about-container">
@@ -44,7 +65,7 @@
                 <p>
                     We combine creative design, premium materials, and expert craftsmanship to deliver signage solutions that help businesses make a lasting impression.
                 </p>
-                <a href="about-us.html" class="cta-button">Learn More</a>
+                <a href="about-us.php" class="cta-button">Learn More</a>
             </div>
         </div>
     </section>
@@ -91,7 +112,7 @@
                 </ul>
             </div>
             <div class="offer-image slide-in-right">
-                <img src="res/general-images/workshop/Google_AI_Studio_2025-08-28T07_51_13.044Z.png" alt="Our workshop showing precision work">
+                <img src="res\general-images\workshop\WhatsApp Image 2025-09-04 at 14.26.32_30d265b6.jpg" alt="Our workshop showing precision work">
             </div>
         </div>
     </section>
@@ -122,22 +143,22 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-quote">"The vehicle wrap for our fleet was a game-changer. We've seen a significant increase in brand visibility and inquiries. Fantastic work!"</p>
+                        <p class="testimonial-quote">“Future Colours transformed our office interiors with their stunning signage solutions. The precision and creativity they bring perfectly complement our design aesthetics.”</p>
                         <div class="testimonial-author">
                             <img src="https://placehold.co/100x100/eeeeee/1a4b84?text=MB" alt="Client photo">
                             <div class="author-details">
-                                <span class="author-name">Michael Brown</span>
-                                <span class="author-company">Logistics Manager, Swift Deliveries</span>
+                                <span class="author-name">Ayesha Khan</span>
+                                <span class="author-company">Interior Design Consultant, UrbanNest Interiors</span>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-quote">"A truly creative and reliable partner. They took our initial concept and turned it into a stunning custom piece for our lobby."</p>
+                        <p class="testimonial-quote">“Their branding and signage work added the perfect finishing touch to our client’s retail space. Professional, reliable, and always exceeding expectations.”</p>
                         <div class="testimonial-author">
                             <img src="https://placehold.co/100x100/eeeeee/1a4b84?text=SC" alt="Client photo">
                             <div class="author-details">
-                                <span class="author-name">Sarah Chen</span>
-                                <span class="author-company">Facilities Director, Innovate Inc.</span>
+                                <span class="author-name">Rohan Mehta</span>
+                                <span class="author-company">Senior Interior Designer, VisionSpace Studio</span>
                             </div>
                         </div>
                     </div>

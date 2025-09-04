@@ -3,7 +3,7 @@ session_start();
 
 // Hardcoded credentials (temporary)
 $valid_username = "admin";
-$valid_password = "admin123";
+$valid_password = "FC@Advertisements2025";
 
 // Check if user is logged in
 if (!isset($_SESSION['logged_in'])) {
